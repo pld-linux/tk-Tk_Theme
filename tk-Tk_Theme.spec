@@ -1,4 +1,5 @@
-Summary:	Tk_Theme
+Summary:	Tk_Theme Tcl/Tk extension
+Summary(pl):	Rozszerzenie Tcl/TK Tk_Theme
 Name:		tk-Tk_Theme
 Version:	23
 Release:	1
@@ -7,12 +8,16 @@ Group:		Development/Languages/Tcl
 Source0:	http://www.xmission.com/~georgeps/Tk_Theme/Tk_Theme-%{version}.tgz
 # Source0-md5:	121c335e3b3764cbd04eea68b6a66dd3
 URL:		http://www.xmission.com/~georgeps/Tk_Theme/
-Requires:	tk >= 8.4.3
+BuildRequires:	sed >= 4.0
 BuildRequires:	tk-devel >= 8.4.3
+Requires:	tk >= 8.4.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Tk_Theme
+Tk_Theme Tcl/Tk extension.
+
+%description -l pl
+Rozszerzenie Tcl/TK Tk_Theme.
 
 %prep
 %setup -q -n Tk_Theme-%{version}
@@ -20,7 +25,7 @@ Tk_Theme
 %build
 tclsh configure
 %{__make} \
-	CC="%{__cc}"
+	CC="%{__cc} %{rpmcflags} -Wall -fPIC -DUSE_STUBS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
