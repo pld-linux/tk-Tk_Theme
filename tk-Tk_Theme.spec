@@ -1,5 +1,5 @@
 Summary:	Tk_Theme Tcl/Tk extension
-Summary(pl.UTF-8):   Rozszerzenie Tcl/TK Tk_Theme
+Summary(pl.UTF-8):	Rozszerzenie Tcl/TK Tk_Theme
 Name:		tk-Tk_Theme
 Version:	23
 Release:	1
