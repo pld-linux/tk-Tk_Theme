@@ -1,5 +1,5 @@
 Summary:	Tk_Theme Tcl/Tk extension
-Summary(pl):	Rozszerzenie Tcl/TK Tk_Theme
+Summary(pl.UTF-8):   Rozszerzenie Tcl/TK Tk_Theme
 Name:		tk-Tk_Theme
 Version:	23
 Release:	1
@@ -16,7 +16,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Tk_Theme Tcl/Tk extension.
 
-%description -l pl
+%description -l pl.UTF-8
 Rozszerzenie Tcl/TK Tk_Theme.
 
 %prep
